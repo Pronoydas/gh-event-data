@@ -40,3 +40,9 @@ jobs:
     steps:
       - name: Deploy
         run: echo "Deploying..."
+      - name: Download Artifact 
+        uses: actions/download-artifact@v4
+        with:
+          name: dist-file
+      - name: Viewing Content 
+        run: ls    
